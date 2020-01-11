@@ -9,10 +9,6 @@ const userRouter = require('./routes/shop');
 
 const app = express();
 app.set('view engine', 'ejs');
-// app.engine('hbs', hbs()); for handlebars templating
-// app.set('view engine', 'hbs');
-// app.set('view engine', 'pug'); for pug templating
-
 app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({extended: true}));
