@@ -4,8 +4,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 // const hbs = require('express-handlebars');
 
-const adminData = require('./routes/admin');
-const userRouter = require('./routes/shop');
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+const errorController = require('./controllers/error')
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -14,14 +15,10 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/admin', adminData.routes);
-app.use(userRouter);
+app.use('/admin', adminRoutes);
+app.use(shopRoutes);
 
-app.use((req, res) => {
-  res.status(400).render('404', {pageTitle: 'Error Page'})
-  // res.status(400).sendFile(path.join(__dirname, 'views', '404.html'))
-  // res.status(400).send('<h1>Page Not Found</h1>')
-})
+app.use(errorController.pageNotFound)
 app.listen(3000, function(){
   console.log('Server listening on PORT 3000');
 })
