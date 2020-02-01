@@ -1,9 +1,16 @@
 [
   {
     "id": "12345",
-    "title": "Book",
-    "imageURL": "https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png",
-    "description": "Best book ever",
-    "price": "19"
+    "title": " Book !!!!",
+    "imageURL": " https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png ",
+    "description": " Best book ever ",
+    "price": "35.99"
+  },
+  {
+    "id": "0.16656597294037812",
+    "title": "The science ",
+    "imageURL": " https://images-na.ssl-images-amazon.com/images/I/31o6m4snULL._SX346_BO1,204,203,200_.jpg ",
+    "description": " A textbook ",
+    "price": "15"
   }
 ]
